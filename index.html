@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Resume/CV Design</title>
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<link type="text/css" rel="stylesheet" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".full_info_wrap .tabs ul li").click(function(){
+				$(".full_info_wrap .tabs ul li").removeClass("active");
+				$(this).addClass("active");
+
+				var datali = $(this).attr("data-li");
+
+				$(".full_info_item").hide();
+
+				if(datali == "experience"){
+					$(".experience").show();
+				}
+				else if(datali == "education"){
+					$(".education").show();
+				}
+				else if(datali == "contact"){
+					$(".contact").show();
+				}
+				else{
+					console.log("Laoding...");
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+
+<div class="wrapper">
+   <div class="resume">
+
+       <div class="profile_info">
+            <div class="profile_img">
+              <img src="profile_pic.png" alt="profile_img">
+            </div>
+            <div class="profile_data">
+                <p class="name">سید جلال حسینی</p>
+                <span>ایران، تهران<i style="margin-left: 5px" class="fas fa-map-marker-alt"></i></span>
+            </div>
+            <div class="view_more_btn">
+              <a href="#">اطلاعات بیشتر</a>
+            </div>
+        </div>
+
+       <div class="skills">
+	       <div class="title" style=" direction: rtl; text-align: right">
+	          مهارت های من:
+	       </div>
+	       <ul>
+	         <li>
+	           <div class="skill_item html">
+	             <div class="icon"></div>
+	             <div class="text">photography</div>
+	           </div>
+	         </li>
+	         <li>
+	           <div class="skill_item css">
+	             <div class="icon"></div>
+	             <div class="text">teaching english</div>
+	           </div>
+	         </li>
+	         <li>
+	           <div class="skill_item js">
+	             <div class="icon"></div>
+	             <div class="text">seo</div>
+	           </div>
+	         </li>
+	         <li>
+	           <div class="skill_item photoshop">
+	             <div class="icon"></div>
+	             <div class="text">تولید محتوا </div>
+	           </div>
+	         </li>
+	         <li>
+	           <div class="skill_item angular">
+	             <div class="icon"></div>
+	             <div class="text">دیجیتال مارکتینگ</div>
+	           </div>
+	         </li>
+	         <li>
+	           <div class="skill_item react">
+	             <div class="icon"></div>
+	             <div class="text">فتوشاپ</div>
+	           </div>
+	         </li>
+	       </ul>
+	    </div>
+
+        <div class="full_info_wrap">
+            <div class="tabs">
+                <ul dir="rtl">
+                    <li data-li="experience" class="active">تجربه کاری من</li>
+                    <li data-li="education">تحصیلات من</li>
+                    <li data-li="contact">راه های ارتباطی</li>
+                </ul>
+            </div>
+
+            <div class="full_info">
+                <div class="full_info_item experience" style=" direction: rtl; text-align: right">
+                    <div class="title">سوابق کاری من:</div>
+                    <div class="info_wrap">
+                    	<ul>
+                    		<li>
+                    			<div class="sub_title">
+                    				
+                    			</div>
+
+								<div class="info_item">
+									<div class="info_title">
+								تولید محتوا برای سایت و اینستاگرام رایانه کمک از سال 98 تا کنون
+									</div>
+									<div class="data">
+									
+									</div>
+								</div>
+                    		</li>
+                    		<li>
+                    			<div class="sub_title">
+                    				
+                    			</div>
+
+								<div class="info_item">
+									<div class="info_title">
+									علاقه مند به دیجیتال مارکتینگ
+									</div>
+									<div class="data">
+									 
+									</div>
+								</div>
+                    		</li>
+                    		<li>
+                    			<div class="sub_title">
+                    				
+                    			</div>
+
+								<div class="info_item">
+									<div class="info_title">
+										
+									</div>
+									<div class="data">
+										
+									</div>
+								</div>
+                    		</li>
+                    	</ul>
+                    </div>
+                </div>
+                <div class="full_info_item education" style="display: none; direction: rtl; text-align: right">
+                  <div class="title">تحصیلات</div>
+
+                  <div class="info_wrap">
+                    	<ul>
+                    		<li>
+                    			<div class="sub_title">
+                    				سال تحصیلات
+                    			</div>
+
+								<div class="info_item">
+									<div class="info_title">
+										دانشجوی کارشناسی
+									</div>
+									<div class="data">
+										در دانشگاهی واقع در استان تهران تحصیل می کنم
+									</div>
+								</div>
+                    		</li>
+                    		<li>
+                    			<div class="sub_title">
+                    				دوران تحصیل مدرسه
+                    			</div>
+
+								<div class="info_item">
+									<div class="info_title">
+									دوازده سال تحصیل در مدرسه
+									</div>
+									<div class="data">
+
+									</div>
+								</div>
+                    		</li>
+                    	</ul>
+                    </div>
+                </div>
+                <div class="full_info_item contact" style="display: none; direction: rtl; text-align: right">
+                  <div class="title">راه های ارتباطی:</div>
+                  <div class="info_wrap">
+                  	<ul>
+                  		<li>
+                  			<span class="info_q">Email</span>
+                  			<span class="info_a">jalal.hoseini78@gmail.com</span>
+                  		</li>
+                  		<li>
+                  			<span class="info_q"></span>
+                  			<span class="info_a"></span>
+                  		</li>
+                  		<li>
+                  			<span class="info_q">تلفن همراه:</span>
+                  			<span class="info_a">09105652945</span>
+                  		</li>
+                  		<li>
+                  			<span class="info_q"></span>
+                  			<span class="info_a"></span>
+                  		</li>
+                  		<li>
+                  			<span class="info_q"></span>
+                  			<span class="info_a"></span>
+                  		</li>
+                  		<li>
+                  			<span class="info_q">Twitter</span>
+                  			<span class="info_a">آدرس توییتر</span>
+                  		</li>
+                  		<li>
+                  			<span class="info_q">Instagram</span>
+                  			<span class="info_a">آدرس اینستاگرام</span>
+                  		</li>
+                  		<li>
+                  			<span class="info_q">telegram</span>
+                  			<span class="info_a">آدرس تلگرام</span>
+                  		</li>
+                  	</ul>
+                  </div>
+                </div>
+            </div>
+        </div>
+   </div>
+</div>
+
+</body>
+</html>
